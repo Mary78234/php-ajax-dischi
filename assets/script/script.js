@@ -3,15 +3,17 @@ const app = new Vue({
 
   data:{
     axios,
-    url = 'http://localhost:8888/Esercizi%20Boolean/php-ajax-dischi/api.php',
-    listaAlbum: []
+    url: 'http://localhost:8888/Esercizi%20Boolean/php-ajax-dischi/api.php',
+    listaAlbum: [],
+    listaDati: []
   },
 
   created(){
-    axios.get(url)
+    axios.get(this.url)
     .then(resp=>{
-      this.listaAlbum.push(resp);
-      console.log(this.listaAlbum);
+      this.listaAlbum.push(resp.data);
+      this.listaDati = this.listaAlbum[0];
+      console.log(this.listaDati);
     })
     .catch(err=>{
       console.log(err);

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
@@ -20,11 +21,11 @@
       <div class="container">
         <div class="box-row">
   
-          <div class="box-card">
+          <div class="box-card" v-for="card in listaDati">
   
-            <img src="" alt="">
-            <h2></h2>
-            <p></p>
+            <img :src="card['poster']" alt="">
+            <h2>{{card['title']}}</h2>
+            <p>{{card['author']}} {{card['year']}}</p>
             
           </div>
   
