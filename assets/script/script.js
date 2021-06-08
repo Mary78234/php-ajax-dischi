@@ -11,9 +11,8 @@ const app = new Vue({
   created(){
     axios.get(this.url)
     .then(resp=>{
-      this.listaAlbum.push(resp.data);
-      this.listaDati = this.listaAlbum[0];
-      console.log(this.listaDati);
+      this.listaAlbum = resp.data;
+      console.log(this.listaAlbum);
     })
     .catch(err=>{
       console.log(err);
