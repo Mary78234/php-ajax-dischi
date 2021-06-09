@@ -26,20 +26,10 @@ main{
   background-color: #1E2D3B;
 }
 
-h2{
+h4{
+  margin-top: 20px;
   color: white;
   text-decoration: uppercase;
-}
-
-.container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1170px;
-  margin: auto;
-  min-height: calc(100vh - 155px);
-  text-align: center;
 }
 
 header .box-img{
@@ -53,28 +43,20 @@ header .box-img{
   background-position: center;
 }
 
-main .box-row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+main .box-card{
+  flex-basis: calc(100% / 5);
+  min-height: 400px;
 }
 
-main .box-card{
-  flex-basis: calc(100% / 5 - 20px);
-  margin: 5px;
+main .box-card div{
   background-color: #2E3A46;
   transition: transform .2s;
   cursor: pointer;
-  /* flex-grow: 1; */
+  height: 100%;
 }
 
 main .box-card:hover{
   transform: scale(1.04);
-}
-
-main .box-card img{
-  max-width: 100%;
-  height: auto;
 }
 
 main .box-card p:hover{

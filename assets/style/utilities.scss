@@ -1,9 +1,0 @@
-@import '@/assets/style/mixin.scss';
-
-.container{
-  @include center(vertical);
-  flex-direction: column;
-  max-width: 1170px;
-  margin: auto;
-  min-height: calc(100vh - 155px);
-}
